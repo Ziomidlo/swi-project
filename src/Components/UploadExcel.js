@@ -20,12 +20,25 @@ const UploadExcel = ({onDataLoad}) => {
         reader.readAsArrayBuffer(file);
     };
 
-    return (
-        <div>
-            <input type="file" accept=".xlsx, .xls" onChange={handleFileUpload} />
-            {fileName && <p>Załadowano plik: {fileName}</p>}
-        </div>
-    );
+  return (
+    <div style={{ textAlign: "center", margin: "20px 0" }}>
+      <input
+        type="file"
+        accept=".xlsx, .xls"
+        onChange={handleFileUpload}
+        style={{
+          display: "inline-block",
+          padding: "10px 20px",
+          fontSize: "16px",
+          backgroundColor: "#5C677D",
+          color: "white",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
+      />
+    </div>
+  );
 };
 
 export default UploadExcel;
