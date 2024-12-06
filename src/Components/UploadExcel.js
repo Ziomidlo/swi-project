@@ -15,6 +15,8 @@ const UploadExcel = ({onDataLoad}) => {
             const sheet = workbook.Sheets[sheetName];
             let json = XLSX.utils.sheet_to_json(sheet);
 
+            console.log(json);
+
             onDataLoad(json);
         };
         reader.readAsArrayBuffer(file);
