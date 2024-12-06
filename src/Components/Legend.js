@@ -43,11 +43,11 @@ const Legend = ({ stats }) => {
           <ul>
             {stats.map(({ attribute, min, average, max }) => {
               let facePart;
-              if (attribute === 'Bramki stracone') facePart = 'Głowa (headWidth)';
-              else if (attribute === 'Ilość żółtych kartek') facePart = 'Oczy (eyeSize)';
-              else if (attribute === 'Bramki zdobyte') facePart = 'Usta (mouthWidth)';
-              else if (attribute === 'Ilość przeprowadzonych zmian') facePart = 'Brwi (browTilt)';
-              else if (attribute === 'Miejsce w tabeli ') facePart = 'Nos (noseLength)';
+              if (attribute === 'Bramki stracone') facePart = 'Głowa';
+              else if (attribute === 'Ilość żółtych kartek') facePart = 'Oczy';
+              else if (attribute === 'Bramki zdobyte') facePart = 'Usta';
+              else if (attribute === 'Ilość przeprowadzonych zmian') facePart = 'Brwi';
+              else if (attribute === 'Miejsce w tabeli ') facePart = 'Nos';
 
               return (
                 <li key={attribute}>
